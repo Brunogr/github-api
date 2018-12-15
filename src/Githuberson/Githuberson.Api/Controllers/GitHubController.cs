@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Githuberson.Application.Models;
+using Githuberson.Application.Models.Blip;
 using Githuberson.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace Githuberson.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<GitRepository>>> Get()
+        public async Task<ActionResult<BlipDocument>> Get()
         {
             var result = await this.gitHubService.GetRepositories();
             return Ok(result);

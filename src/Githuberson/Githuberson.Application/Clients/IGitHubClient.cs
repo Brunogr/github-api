@@ -14,5 +14,9 @@ namespace Githuberson.Application.Clients
 
         [Get("/search/repositories?q=user:takenet+language:C%23&")]
         Task<RepositoryWrapper> GetTakeRepositories();
+
+
+        //[Get("/search/repositories?q=user:{user}+language:C%23&")]
+        //Task<RepositoryWrapper> GetRepositories(string user);
     }
 }

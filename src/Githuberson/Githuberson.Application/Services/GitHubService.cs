@@ -1,5 +1,6 @@
 ﻿using Githuberson.Application.Clients;
 using Githuberson.Application.Models;
+using Githuberson.Application.Models.Blip;
 using Githuberson.Application.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Serialization;
@@ -28,11 +29,19 @@ namespace Githuberson.Application.Services
                 });
         }
 
-        public async Task<List<GitRepository>> GetRepositories()
+        public async Task<BlipDocument> GetRepositories()
         {
             var result = await this.gitHubClient.GetTakeRepositories();
+
+            var document = new BlipDocument(result.Items.OrderBy(o => o.Created_at).Take(5)
+                .Select(item => 
+                    new CarouselDocument(
+                            new CarouselHeader(item.Full_name, item.Name, item.Owner.Avatar_url)
+                        )
+                    ).ToArray()
+                );
             
-            return result.Items.OrderBy(o => o.Created_at).Take(5).ToList();
+            return document;
         }
     }
 }

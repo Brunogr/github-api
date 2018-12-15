@@ -1,4 +1,5 @@
 ﻿using Githuberson.Application.Models;
+using Githuberson.Application.Models.Blip;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Githuberson.Application.Services.Interfaces
 {
     public interface IGitHubService
     {
-        Task<List<GitRepository>> GetRepositories();
+        Task<BlipDocument> GetRepositories();
     }
 }
