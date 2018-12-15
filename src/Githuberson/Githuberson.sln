@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Githuberson.Api", "Githuberson.Api\Githuberson.Api.csproj", "{BA3DA164-DD7D-491A-B8A3-54A99ABD8BDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Githuberson.Application", "Githuberson.Application\Githuberson.Application.csproj", "{210F08EC-93AD-4F08-AC23-AB7B65FA9827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA3DA164-DD7D-491A-B8A3-54A99ABD8BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3DA164-DD7D-491A-B8A3-54A99ABD8BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3DA164-DD7D-491A-B8A3-54A99ABD8BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3DA164-DD7D-491A-B8A3-54A99ABD8BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210F08EC-93AD-4F08-AC23-AB7B65FA9827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210F08EC-93AD-4F08-AC23-AB7B65FA9827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210F08EC-93AD-4F08-AC23-AB7B65FA9827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210F08EC-93AD-4F08-AC23-AB7B65FA9827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F66448BB-6D35-437E-AE72-D5F603C5B910}
+	EndGlobalSection
+EndGlobal
