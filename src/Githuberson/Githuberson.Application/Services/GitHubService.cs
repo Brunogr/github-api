@@ -15,18 +15,10 @@ namespace Githuberson.Application.Services
 {
     public class GitHubService : IGitHubService
     {
-        IGitHubClient gitHubClient;
-        public GitHubService(IConfiguration configuration)
+        private readonly IGitHubClient gitHubClient;
+        public GitHubService(IConfiguration configuration, IGitHubClient gitHubClient)
         {
-            this.gitHubClient = RestService.For<IGitHubClient>(configuration.GetSection("Github:Host").Value,
-                new RefitSettings
-                {
-                    JsonSerializerSettings = new Newtonsoft.Json.JsonSerializerSettings
-                    {
-                        ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                        ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                    }
-                });
+            this.gitHubClient = gitHubClient;
         }
 
         public async Task<BlipDocument> GetRepositories()
